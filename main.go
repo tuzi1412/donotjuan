@@ -56,7 +56,7 @@ func main() {
         if err != nil {
                 return
         }
-nowMonth := time.Now().Month()
+        nowMonth := time.Now().Month()
         nowDay := time.Now().Day()
 
         for _, v := range juan.Data {
@@ -70,7 +70,7 @@ nowMonth := time.Now().Month()
                 }
         }
 
-  for _, v := range juan.Data {
+        for _, v := range juan.Data {
                 dataMonth, _ := strconv.Atoi(v.Date[4:6])
                 dataDay, _ := strconv.Atoi(v.Date[6:])
                 if v.IsWorkDay && dataMonth == fileMonth {
@@ -82,7 +82,7 @@ nowMonth := time.Now().Month()
                                 if vv.StartTime == "000000" && vv.EndTime == "000000" { //全天请假/外出公干
                                         continue
                                 }
-  if vv.StartTime != "" || vv.EndTime != "" {
+                                if vv.StartTime != "" || vv.EndTime != "" {
                                         if actualStart > timeToNum(vv.StartTime) || actualStart == 0 {
                                                 actualStart = timeToNum(vv.StartTime)
                                         }
