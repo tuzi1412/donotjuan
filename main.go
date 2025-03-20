@@ -98,7 +98,7 @@ func main() {
                 }
         }
 
-  fmt.Printf("剩余工时%d分钟\n", totalMinutes)
+        fmt.Printf("剩余工时%d分钟\n", totalMinutes)
         if totalMinutes > 180 {
                 fmt.Println("卷王求放过！")
         } else {
